@@ -1,0 +1,65 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    height: 100vh;
+    background: url('kantor.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+}
+
+.background-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+/* Container Login */
+.login-container {
+    width: 100%; display: flex; justify-content: center; align-items: center;
+}
+
+/* Desain Kartu Transparan */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px; border-radius: 20px; color: white;
+    text-align: center; display: none; width: 100%; max-width: 600px;
+}
+.card.active { display: block; }
+.login-box { max-width: 350px; }
+
+/* Sidebar */
+.wrapper { display: flex; width: 100%; height: 100%; }
+.sidebar {
+    width: 260px; background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px); color: white; padding: 20px;
+}
+.sidebar-header { padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.2); margin-bottom: 20px; }
+.sidebar ul { list-style: none; }
+.sidebar ul li {
+    padding: 15px; margin-bottom: 10px; cursor: pointer;
+    background: rgba(255, 255, 255, 0.05); border-radius: 10px; transition: 0.3s;
+}
+.sidebar ul li:hover { background: #007bff; }
+
+/* Konten */
+.content { flex: 1; padding: 40px; display: flex; justify-content: center; align-items: center; }
+
+/* Tombol dan Input */
+input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: none; }
+.btn { width: 100%; padding: 12px; border: none; border-radius: 8px; background: #007bff; color: white; font-weight: bold; cursor: pointer; margin-top: 10px; }
+.green { background: #28a745; }
+.btn-link { background: none; border: none; color: #ccc; margin-top: 10px; cursor: pointer; text-decoration: underline; }
+
+/* Tabel Admin */
+.table-container { margin-top: 20px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px; border: 1px solid rgba(255,255,255,0.1); }
+th { background: rgba(255,255,255,0.1); }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .wrapper { flex-direction: column; }
+    .sidebar { width: 100%; height: auto; }
+}
